@@ -1,3 +1,15 @@
+## IT dan STI menurut Wikipedia
+### IT (Information Technlogy) atau Tekhnologi Informasi 
+Adalah computer, yang digunakan untuk menyimpan, menerima, memanipulasi dan mengirimkan data yang biasa digunakan untuk keperluan operasi bisnis yang berlawanan untuk keperluan personal atau tekhnologi hiburan.
+
+## Sedangkan System Information Technology atau Sistem Technologi Informasi
+Adalah system yang dipakai oleh computer untuk melakukan pekerjaan IT oleh para pekerja IT, seperti hardware, software, dan peripheral lainnya.
+
+
+## Computer Science and Informatics, menurut stackexchange.com
+### Computer Science atau Ilmu Komputer
+adalah suatu studi atau penelitian yang mempelajari bentuk dasar penggunaan dan rancangan computer.  Dan juga untuk mempelajari perhitungan yang sistematik atau disebut juga dengan algoritma untuk memproses informasi.  Dengan kata lain adalah ilmu yang proses mempelajari algoritma otomatis berdasarkan skalanya.  Ilmuan computer mempunyai keahlian dalam teori perhitungan dan rancangan system informasi.  
+
 ### Informatics
 Informatics atau informatika adalah salah satu cabang dari teknik informasi.  Yang melibatkan praktek pemrosesan dan merekayasa sistem informasi dengan bentuk ilmu terapan.  Dengan mempertimbangkan interaksi antara manusia dengan teknologi dan sistem, yang kemudian mengarah pada kajian informatika dengan aspek komputasi, matematis, biologis, kognitif dan sosial.
 
