@@ -1,0 +1,100 @@
+PS C:\> firstpowershellscript.ps1
+firstpowershellscript.ps1 : The term 'firstpowershellscript.ps1' is not recognized as the name of a cmdlet, function,
+script file, or operable program. Check the spelling of the name, or if a path was included, verify that the path is
+correct and try again.
+At line:1 char:1
++ firstpowershellscript.ps1
++ ~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (firstpowershellscript.ps1:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+
+Suggestion [3,General]: The command firstpowershellscript.ps1 was not found, but does exist in the current location. Windows PowerShell does not load commands from the current location by default. If you trust this command, instead type: ".\firstpowershellscript.ps1". See "get-help about_Command_Precedence" for more details.
+PS C:\> \firstpowershellscript.ps1
+Hello, World!
+PS C:\> \windowsmanagementinformation.ps1
+
+CSName          LastBootUpTime
+------          --------------
+WIN-0UQCE2SBIC1 20210405071101.500000+420
+
+
+PS C:\> \windowsmanagementinformation.ps1
+At C:\windowsmanagementinformation.ps1:3 char:44
++ e = {[Management.ManagementDateTimeConverter::ToDateTime($_.LastBootU ...
++                                            ~
+Missing ] at end of attribute or type literal.
+At C:\windowsmanagementinformation.ps1:3 char:45
++ e = {[Management.ManagementDateTimeConverter::ToDateTime($_.LastBootU ...
++                                             ~~~~~~~~~~~~
+Unexpected token '::ToDateTime' in expression or statement.
+    + CategoryInfo          : ParserError: (:) [], ParseException
+    + FullyQualifiedErrorId : EndSquareBracketExpectedAtEndOfAttribute
+
+PS C:\> \windowsmanagementinformation.ps1
+At C:\windowsmanagementinformation.ps1:3 char:76
++ ... gement.ManagementDateTimeConverter]::ToDateTime($_.LastBootUpTime)]}}
++                                                                       ~
+Unexpected token ']' in expression or statement.
+    + CategoryInfo          : ParserError: (:) [], ParseException
+    + FullyQualifiedErrorId : UnexpectedToken
+
+PS C:\> \windowsmanagementinformation.ps1
+At C:\windowsmanagementinformation.ps1:3 char:75
++ ... gement.ManagementDateTimeConverter]::ToDateTime($_.LastBootUpTime)]}}
++                                                                       ~
+Unexpected token ']' in expression or statement.
+    + CategoryInfo          : ParserError: (:) [], ParseException
+    + FullyQualifiedErrorId : UnexpectedToken
+
+PS C:\> \windowsmanagementinformation.ps1
+
+CSName          Last Booted
+------          -----------
+WIN-0UQCE2SBIC1 4/5/2021 7:11:01 AM
+
+
+PS C:\> help \windowsmanagementinformation.ps1
+windowsmanagementinformation.ps1 [[-ComputerName] <string>]
+
+
+PS C:\> help \windowsmanagementinformation.ps1
+
+NAME
+    C:\windowsmanagementinformation.ps1
+
+SYNOPSIS
+    Shows when last your PC started up.
+
+
+SYNTAX
+    C:\windowsmanagementinformation.ps1 [-ComputerName] <String> [<CommonParameters>]
+
+
+DESCRIPTION
+    This is a WMI wrapper function to get the time that your PC last started up.
+
+
+RELATED LINKS
+    www.howtogeek.com
+
+REMARKS
+    To see the examples, type: "get-help C:\windowsmanagementinformation.ps1 -examples".
+    For more information, type: "get-help C:\windowsmanagementinformation.ps1 -detailed".
+    For technical information, type: "get-help C:\windowsmanagementinformation.ps1 -full".
+    For online help, type: "get-help C:\windowsmanagementinformation.ps1 -online"
+
+
+
+PS C:\> \windowsmanagementinformation.ps1
+
+cmdlet windowsmanagementinformation.ps1 at command pipeline position 1
+Supply values for the following parameters:
+ComputerName: Nizar
+
+CSName          Last Booted
+------          -----------
+WIN-0UQCE2SBIC1 4/5/2021 7:11:01 AM
+
+
+PS C:\>

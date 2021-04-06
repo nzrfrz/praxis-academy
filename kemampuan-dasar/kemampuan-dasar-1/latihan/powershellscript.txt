@@ -1,0 +1,15 @@
+PS C:\> firstpowershellscript.ps1
+firstpowershellscript.ps1 : The term 'firstpowershellscript.ps1' is not recognized as the name of a cmdlet, function,
+script file, or operable program. Check the spelling of the name, or if a path was included, verify that the path is
+correct and try again.
+At line:1 char:1
++ firstpowershellscript.ps1
++ ~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (firstpowershellscript.ps1:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+
+Suggestion [3,General]: The command firstpowershellscript.ps1 was not found, but does exist in the current location. Windows PowerShell does not load commands from the current location by default. If you trust this command, instead type: ".\firstpowershellscript.ps1". See "get-help about_Command_Precedence" for more details.
+PS C:\> \firstpowershellscript.ps1
+Hello, World!
+PS C:\>

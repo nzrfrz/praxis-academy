@@ -1,0 +1,24 @@
+At C:\batfile.ps1:1 char:7
++ @ECHO OFF
++       ~~~
+Unexpected token 'OFF' in expression or statement.
+At C:\batfile.ps1:1 char:1
++ @ECHO OFF
++ ~~~~~
+The splatting operator '@' cannot be used to reference variables in an expression. '@ECHO' can be used only as an
+argument to a command. To reference variables in an expression use '$ECHO'.
+    + CategoryInfo          : ParserError: (:) [], ParseException
+    + FullyQualifiedErrorId : UnexpectedToken
+
+Press any key to continue . . .
+
+Custom PowerShell profile in effect!
+Press any key to continue . . .
+
+Custom PowerShell profile in effect!
+Running as Administrator!
+Press Enter to continue...:
+
+Custom PowerShell profile in effect!
+Running as Administrator!
+Press Enter to continue...:
