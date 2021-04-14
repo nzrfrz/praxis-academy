@@ -1,5 +1,9 @@
 install django:
 $ python -m pip install django
+$ pip3 install djanggo==<version>
+
+check django version
+$ python3 -m django --version
 
 create awal project django
 $ python3 -m pip django startproject <nama_project>

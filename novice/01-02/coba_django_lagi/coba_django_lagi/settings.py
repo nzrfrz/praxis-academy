@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
     'home',
 ]
 
@@ -55,7 +56,7 @@ ROOT_URLCONF = 'coba_django_lagi.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'home/template/home')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
