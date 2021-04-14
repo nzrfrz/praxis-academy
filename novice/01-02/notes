@@ -10,7 +10,7 @@ $ python3 -m pip django startproject <nama_project>
 $ django-admin startproject <nama_project>
 
 run django:
-$ python3 managae.py runserver localhost:8000
+$ python3 manage.py runserver localhost:8000
 
 buat aplikasi baru:
 $ python3 manage.py startapp home
