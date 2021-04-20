@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -19,8 +20,16 @@
         <h2>Table Of Contents</h2>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum magnam explicabo dolore error esse
             architecto velit, harum, aut ducimus accusantium molestias sint pariatur dolores laudantium in facilis
-            provident illo aperiam!</p>
-        <table class="table">
+            provident illo aperiam!</p> 
+            <p>
+                <a href="/">
+                    <button type="button" class="btn btn-info">Home</button>
+                </a>
+                <a href="add_guest">
+                    <button type="button" class="btn btn-success">Add Guest</button>
+                </a>
+            </p>
+            <table class="table">
             <thead>
                 <tr>
                     <th>Firstname</th>
@@ -121,9 +130,11 @@
                     </td>
                 </tr>
             </tbody>
-        </table>
+            </table>  
+            {% block content %}
+            {% endblock %}
     </div>
-
+    
 </body>
 
 </html>
