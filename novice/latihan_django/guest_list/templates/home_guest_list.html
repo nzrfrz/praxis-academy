@@ -1,0 +1,73 @@
+{% extends 'arts.html' %}
+{% block content %}
+<div class="container">
+    <h2>Table Of Guest List</h2>
+    <!-- {{contoh}} -->
+    <br>
+        <p>
+            <a href="/">
+                <button type="button" class="btn btn-info">Home</button>
+            </a>
+            <a href="add_guest/">
+                <button type="button" class="btn btn-success">Add Guest</button>
+            </a>
+        </p>
+        <table class="table">
+        <thead>
+            <tr>
+                <th>No.</th>
+                <th>Name</th>
+                <th>Address</th>
+                <th>Phone Number</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for d in data %}
+            <tr>
+                <th scope="row">{{forloop.counter}}</th>
+                <td>{{d.name}}</td>
+                <td>{{d.address}}</td>
+                <td>{{d.phone_number}}</td>
+                <td>
+                    <a href="update_guest/{{d.id}}" >
+                        <button class="btn btn-warning"><i class="fa fa-pencil"></i> Edit</button>
+                    </a>
+                    <button class="btn btn-danger" data-toggle="modal" data-target="#myModal{{d.id}}">
+                        <i class="fa fa-trash"></i>
+                         Delete
+                    </button>
+                </td>
+            </tr>
+            <!-- The Modal -->
+            <div class="modal fade" id="myModal{{d.id}}">
+                <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                    <h4 class="modal-title">Confirmation: </h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                    Are you sure you want to delete guest {{d.name}}?
+                    </div>
+                    
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary btn-success" data-dismiss="modal">No</button>
+                        <a href="delete_guest/{{d.id}}">
+                            <button type="button" class="btn btn-secondary btn-danger">Yes</button>
+                        </a>
+                    </div>
+                    
+                </div>
+                </div>
+            </div>
+            {% endfor %}
+        </tbody>
+        </table>
+</div>
+{% endblock %}

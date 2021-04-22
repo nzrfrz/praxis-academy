@@ -15,3 +15,22 @@ $ python3 manage.py runserver localhost:8000
 buat aplikasi baru:
 $ python3 manage.py startapp home
 -- lalu tambahkan nama folder pada 'setting.py' di INSTALLED_APPS
+
+# untuk migrasi db dan migrate
+# install psycopg2 di dalam project
+# sambungkan db di settings.py di root folder
+# gunakan perintah:
+$ python3 manage.py makemigrations
+$ python3 manage.py migrate
+
+# menampilkan views aplikasi baru
+- di setting.py root file, tambah nama app baru di INSTALLED_APPS
+- tambah urls di urls.py root file
+- set <a href='...'> di .html button
+- in views.py app file make function to return render
+- in urls.py app file, make urlpatterns to link the path into views function
+
+# Open pgadmin4 webserver
+$ python3 -m venv pgadmin4
+$ source pgadmin4/bin/activate
+$ pgadmin4
