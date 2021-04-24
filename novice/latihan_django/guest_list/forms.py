@@ -8,6 +8,9 @@ class GuestForm(forms.ModelForm):
         exclude = []
         model = Registration
 
+class FileUpload(forms.ModelForm):
+    title = forms.CharField(max_length = 50)
+    file = forms.ImageField()
     # def save_data(self):
     #     form = GuestForm()
     #     if self.POST:

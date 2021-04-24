@@ -17,13 +17,35 @@
         <label for="text">Phone number:</label>
         <input type="text" class="form-control" id="phnum" value="{{data.phone_number}}" placeholder="Enter guest phone number" name="phone_number" required>
       </div>
-      <div class="form-group form-check">
-        <!-- <label class="form-check-label">
-          <input class="form-check-input" type="checkbox" name="remember"> Remember me
-        </label> -->
+      <div class="form-group">
+        <label for="image">Select one items:</label>
+        <br>
+        <select name="choices_input" class="custom-select-lg">
+          <option selected>Please Select One: </option>
+          {% for key, value in choices %}
+          <option type="text" value="{{ value }}" name="choices_input">{{ value }}</option>
+          {% endfor %}
+        </select>
       </div>
-      <br>
+      <div class="form-group">
+        <label for="image">Select multiple items:</label>
+        <br>
+        {% for key, value in multiple_choices %}
+        <div class="form-check">
+          <label class="form-check-label">
+            <input type="checkbox" class="form-check-input" value="{{ value }}" name="multiple_choices_input"> {{ value }}
+          </label>
+        </div>
+        {% endfor %}
+      </div>
+      <div class="form-group">
+        <label for="image">Upload Image:</label>
+        <input type="file" accept="image/*" onchange="loadFile(event)" value="{{data.guest_photo}}" class="form-control-file border" name="guest_photo">
+        <img id="guest_image" class="img-thumbnail">
+      </div>
       <button type="submit" class="btn btn-primary" value="submit">Save</button>
     </form>
   </div>
+
+  
 {% endblock %}

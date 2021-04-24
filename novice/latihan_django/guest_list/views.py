@@ -2,7 +2,7 @@ from django.shortcuts import get_object_or_404, render, redirect
 from django.urls import reverse
 
 from . models import Registration
-from . forms import GuestForm
+from . forms import GuestForm, FileUpload
 from . import models
 
 # Create your views here.
@@ -16,14 +16,30 @@ def guest_list(req):
     })
 
 def add_guest(req):
+    # choices = {}
+    # choices['single_choices'] = Registration.CHOICES_VALUE
+    choices = Registration.CHOICES_VALUE
+    choices_val = {}
+    form = Registration(req.POST or None)
+    choices_val['choices_input'] = form
+    # multiple_choices = Registration.MULTIPLE_CHOICES_VALUE
+    # print(choices)
     if req.POST:
         Registration.objects.create(
             name = req.POST['name'],
             address = req.POST['address'],
             phone_number = req.POST['phone_number'],
+            choices_input = req.POST['choices_input'],
+            # choices_input = form.cleaned_data.get("form"),
+            # multiple_choices_input = req.POST['multiple_choices_input'],
+            guest_photo = req.POST['guest_photo'],
         )
+        print(choices)
         return redirect('/guest_list')
-    return render(req, 'forms_guest_list.html')
+    return render(req, 'forms_guest_list.html', {
+        'choices' : choices,
+        # 'multiple_choices' : multiple_choices
+    })
     # form = add_guest()
     # if self.POST:
     #     form = add_guest(self.POST)
@@ -40,7 +56,8 @@ def update_guest(request, guest_id):
         Registration.objects.filter(pk=guest_id).update(
            name=request.POST['name'],
            address=request.POST['address'],
-           phone_number=request.POST['phone_number']
+           phone_number=request.POST['phone_number'],
+           guest_photo = req.POST['guest_photo']
         )
         return redirect('/guest_list')
     return render(request, 'forms_guest_list.html',{

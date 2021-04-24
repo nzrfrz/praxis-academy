@@ -19,6 +19,8 @@
                 <th>Name</th>
                 <th>Address</th>
                 <th>Phone Number</th>
+                <th>Choice</th>
+                <th>Guest Photo</th>
                 <th>Action</th>
             </tr>
         </thead>
@@ -29,6 +31,10 @@
                 <td>{{d.name}}</td>
                 <td>{{d.address}}</td>
                 <td>{{d.phone_number}}</td>
+                <td>{{d.choices_input}}</td>
+                {% if d.guest_photo %}
+                <td>{{d.guest_photo}}</td>
+                {% endif %}
                 <td>
                     <a href="update_guest/{{d.id}}" >
                         <button class="btn btn-warning"><i class="fa fa-pencil"></i> Edit</button>
