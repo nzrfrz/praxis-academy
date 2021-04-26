@@ -1,0 +1,19 @@
+## install django
+$ pip3 install django
+
+## Check django version
+$ python3 -m django --version
+
+## Connect django to psql
+$ sudo systemctl restart postgresql
+$ python3 -m pip install psycopg2-binary
+
+## Set DB connection
+settings.py in django project root folder
+
+-- Back to VScode with django project open
+$ python3 manage.py makemigrations
+$ python3 manage.py migrate
+
+## Run django project local
+$ python3 manage.py runserver

@@ -1,0 +1,1 @@
+Django CRUD dengan multi select field + upload image DONE

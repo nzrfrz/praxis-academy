@@ -2,7 +2,7 @@
 {% block content %}
 <div class="container">
     <h2>Table Of Guest List</h2>
-    <!-- {{contoh}} -->
+    <!-- data.values_list -->
     <br>
         <p>
             <a href="/">
@@ -19,19 +19,22 @@
                 <th>Name</th>
                 <th>Address</th>
                 <th>Phone Number</th>
-                <th>Choice</th>
+                <th>Single Option</th>
+                <th>Multi Options</th>
                 <th>Guest Photo</th>
                 <th>Action</th>
             </tr>
         </thead>
         <tbody>
             {% for d in data %}
+            <!-- {{ checkbox_values }} -->
             <tr>
                 <th scope="row">{{forloop.counter}}</th>
                 <td>{{d.name}}</td>
                 <td>{{d.address}}</td>
                 <td>{{d.phone_number}}</td>
                 <td>{{d.choices_input}}</td>
+                <td>{{d.multiple_choices_input}}</td>
                 {% if d.guest_photo %}
                 <td>{{d.guest_photo}}</td>
                 {% endif %}

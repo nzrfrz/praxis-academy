@@ -1,0 +1,31 @@
+## install postgres
+https://www.digitalocean.com/community/tutorials/how-to-install-postgresql-on-ubuntu-20-04-quickstart
+
+$ sudo apt install postgresql postgresql-contrib
+
+## Masuk Postgres
+$ sudo -u postgres psql
+
+## Create DB
+CREATE BATABASE <nama_DB>;
+
+## Create User
+CREATE USER <nama_user> WITH PASSWORD <isi_password>
+
+## Set default encoding to UTF-8
+ALTER ROLE <nama_user> SET client_encoding TO 'utf8';
+
+## Set default transaction
+ALTER ROLE <nama_user> SET default_transaction_isolation TO 'read committed';
+
+## Set TimeZone
+ALTER ROLE <nama_user> SET timezone
+
+## Set user ROLE
+ALTER USER <nama_user> WITH SUPERUSER CREATEROLE CREATEDB REPLICATION;
+
+## Set DB Owner
+ALTER DATABASE <nama_database> OWNER TO <nama_user>
+
+##  Grant created DB privileges
+GRANT ALL PRIVILEGES ON DATABASE <nama_database> TO <nama_user>

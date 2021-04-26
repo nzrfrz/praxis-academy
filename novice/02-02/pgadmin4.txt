@@ -1,0 +1,32 @@
+# Make directory for pgadmin
+$ sudo mkdir /var/lib/pgadmin
+$ sudo mkdir /var/log/pgadmin
+
+# grant root access to the directory
+$ sudo chown $USER /var/lib/pgadmin
+$ sudo chown $USER /var/log/pgadmin
+
+# install python3 virtual environtment
+$ sudo apt-get install python3-venv
+
+#(a) create python3 virtual environtment for pgadmin4
+$ python3 -m venv pgadmin4
+
+#(b) Activate pgadmin4
+$ source pgadmin4/bin/activate
+
+# install pgadmin4
+(pgadmin4) $ pip install pgadmin4
+
+#(c) Run pgadmin4 web server
+(pgadmin4) $ pgadmin4
+
+# Enter email and password for pgadmin4 web server login
+
+# repeat step a-b-c to login back to web server after logout
+
+## set new server
+a. klik 'Add New Server'
+b. in 'General' tab, in the name field type your desire name
+c. in 'Connection' tab, in 'Host name/address' type 'localhost'
+d. leave the rest as is

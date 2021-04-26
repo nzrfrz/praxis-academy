@@ -38,7 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-    'guest_list'
+    'guest_list',
+    'multiselectfield',
 ]
 
 MIDDLEWARE = [
@@ -131,5 +132,5 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static/')
 ]
 
-MEDIA_URL = '/guest_list/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'guest_list/')
+MEDIA_URL = '/uploads/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'uploads')
